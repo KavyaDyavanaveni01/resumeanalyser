@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register | SkillGraph AI</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex align-items-center justify-content-center py-5">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <!-- Branding Header -->
+                <div class="text-center mb-4">
+                    <h2 class="display-6 fw-bold"><i class="bi bi-graph-up-arrow text-gradient me-2"></i>SkillGraph AI</h2>
+                    <p class="text-secondary">Resume Skill Gap Analyzer & Roadmap Builder</p>
+                </div>
+
+                <!-- Auth Glass Card -->
+                <div class="glass-card p-4 p-sm-5 animated-fade-in">
+                    
+                    <!-- Alert Notification Box -->
+                    <div id="authAlert" class="alert d-none" role="alert"></div>
+
+                    <!-- LOGIN FORM -->
+                    <div id="loginSection">
+                        <h3 class="mb-4 fw-bold">Sign In</h3>
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Email address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0 border-secondary-subtle text-secondary"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control border-start-0" id="loginEmail" placeholder="name@example.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="loginPassword" class="form-label">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0 border-secondary-subtle text-secondary"><i class="bi bi-lock"></i></span>
+                                    <input type="password" class="form-control border-start-0" id="loginPassword" placeholder="••••••••" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100 mb-3">
+                                <span id="loginBtnText">Sign In</span>
+                                <span id="loginSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                            </button>
+                        </form>
+                        <div class="text-center">
+                            <p class="text-secondary small mb-0">Don't have an account? <a href="#" id="toRegister" class="text-gradient fw-semibold text-decoration-none">Sign Up</a></p>
+                        </div>
+                    </div>
+
+                    <!-- REGISTRATION FORM -->
+                    <div id="registerSection" class="d-none">
+                        <h3 class="mb-4 fw-bold">Create Account</h3>
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="regName" class="form-label">Full Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0 border-secondary-subtle text-secondary"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control border-start-0" id="regName" placeholder="John Doe" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="regEmail" class="form-label">Email address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0 border-secondary-subtle text-secondary"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control border-start-0" id="regEmail" placeholder="name@example.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="regPassword" class="form-label">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0 border-secondary-subtle text-secondary"><i class="bi bi-lock"></i></span>
+                                    <input type="password" class="form-control border-start-0" id="regPassword" placeholder="Minimum 6 characters" minlength="6" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="regGoal" class="form-label">Target Career Goal</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-end-0 border-secondary-subtle text-secondary"><i class="bi bi-briefcase"></i></span>
+                                    <select class="form-select border-start-0" id="regGoal" required>
+                                        <option value="" disabled selected>Select your career path...</option>
+                                        <option value="Full Stack Developer">Full Stack Developer</option>
+                                        <option value="Data Scientist">Data Scientist</option>
+                                        <option value="DevOps Engineer">DevOps Engineer</option>
+                                        <option value="Frontend Developer">Frontend Developer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100 mb-3">
+                                <span id="registerBtnText">Sign Up</span>
+                                <span id="registerSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                            </button>
+                        </form>
+                        <div class="text-center">
+                            <p class="text-secondary small mb-0">Already have an account? <a href="#" id="toLogin" class="text-gradient fw-semibold text-decoration-none">Sign In</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
